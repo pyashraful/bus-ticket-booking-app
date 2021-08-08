@@ -4,7 +4,7 @@ const createSeats = (rows, startIndex) => {
   let k = 'A';
   const section = [];
   while(i < 6 && j <= rows) {
-      if(k > 'F') {
+      if(k > 'D') {
           k = 'A';
           j++;
           console.log(j)
@@ -18,8 +18,8 @@ const createSeats = (rows, startIndex) => {
 
 }
 
-const n = createSeats(2, '1')
-const m = createSeats(10, '3')
+const n = createSeats(4, '1')
+const m = createSeats(8, '3')
 
 console.log(n)
 console.log(m)

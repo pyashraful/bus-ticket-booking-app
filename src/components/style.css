@@ -1,0 +1,19 @@
+.seats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+.seats > div {
+  border: 2px solid rgb(17, 15, 15);
+}
+
+.green {
+  background-color: rgb(102, 226, 119);
+  cursor: pointer;
+}
+
+.bookedStyle {
+  background-color: rgb(210, 66, 30);
+}

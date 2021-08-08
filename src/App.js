@@ -1,10 +1,11 @@
 import React from 'react'
+import BookSeats from './components/BookSeats'
 
 const App = () => {
   return (
-    <div>
-      hellow
-    </div>
+    <>
+      <BookSeats />
+    </>
   )
 }
 
