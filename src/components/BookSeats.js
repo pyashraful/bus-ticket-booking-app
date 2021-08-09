@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
+import BusDetails from './busDetails/BusDetails';
 import busData from '../data'
+import { Grid } from '@material-ui/core';
 import Seats from './Seats';
 import './style.css'
 
@@ -22,9 +24,30 @@ const BookSeats = () => {
     } 
   }
   return (
-    <div className='seats' >
-      <Seats seats={seats} addToBook={addToBook} booked={booked} />
-    </div>
+    <>
+    <Grid item lg={6} ms={12}>
+      <BusDetails />
+    </Grid>
+    <Grid item lg={6} ms={12}> 
+      <div className='showraper'>
+          <div>
+            <span></span>
+            <p>selected</p>
+          </div>
+          <div>
+            <span></span>
+            <p>selected</p>
+          </div>
+          <div>
+            <span></span>
+            <p>selected</p>
+          </div>
+      </div>
+      <div className='seats' >
+        <Seats seats={seats} addToBook={addToBook} booked={booked} />
+      </div>
+    </Grid>
+    </>
   )
 }
 

@@ -1,19 +1,27 @@
 .seats {
+  max-width: 250px;
+  /* height: 100vh; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
   grid-gap: 10px;
 }
 
 .seats > div {
-  border: 2px solid rgb(17, 15, 15);
+  height: 30px;
+  width: 30px;
+  border-radius: 20%;
+  font-size: 0;
+}
+
+.seats div:nth-child(2n) {
+  margin-right: 40px;
 }
 
 .green {
-  background-color: rgb(102, 226, 119);
+  background-color: #97cacf;
   cursor: pointer;
 }
 
 .bookedStyle {
-  background-color: rgb(210, 66, 30);
+  background-color: #f8485e;
 }
