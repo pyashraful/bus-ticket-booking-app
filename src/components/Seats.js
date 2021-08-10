@@ -1,15 +1,20 @@
-const Seats = ({ seats, booked, addToBook }) => {
+const Seats = ({ seats, booked, addToBook, preBoooked }) => {
+
+  console.log(preBoooked)
 
   return (
     <>
-
       {seats.map((seat) => {
 
-        let availableStyle = 'green'
+        let availableStyle = 'available'
         // console.log(seat)
+        if(preBoooked.includes(seat)){
+          console.log('go')
+          availableStyle = 'booked'
+        }
         // console.log(booked)
-        if (booked.includes(seat)) {
-          availableStyle = 'bookedStyle'
+        if(booked.includes(seat)) {
+          availableStyle = 'selected'
         }
 
         // if(booked.includes(seat)){

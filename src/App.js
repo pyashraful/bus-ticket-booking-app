@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Container className={classes.root}>
-        <Grid container>
+        <Grid container alignItems='center'>
           <BookSeats />
         </Grid>
       </Container>
