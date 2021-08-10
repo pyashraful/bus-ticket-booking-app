@@ -1,22 +1,26 @@
 import React, {useState} from 'react'
 import BusDetails from './busDetails/BusDetails';
 import busData from '../data'
-import { Grid } from '@material-ui/core';
+import { Grid, Card } from '@material-ui/core';
 import Seats from './Seats';
 import './style.css'
 
 const BookSeats = () => {
 
   const [seats, setSeats] = useState(busData())
-  const [preBoooked, setPreBooked] = useState(['1A', '2B'])
+  const [preBoooked, setPreBooked] = useState(['A1', 'B2'])
   const [booked, setbooked] = useState([])
   const [myBooked, setmyBooked ] = useState([])
 
 
   const addToBook = (e) => {
     if(e.target.className === 'available' && !myBooked.includes(e.target.innerText)){
-      setbooked( [...booked, e.target.innerText])
-      setmyBooked([...myBooked, e.target.innerText ])
+      if(myBooked.length === 4){
+        alert('you cannot select more than 4')
+      }else{
+        setbooked( [...booked, e.target.innerText])
+        setmyBooked([...myBooked, e.target.innerText ])
+      }
     }
     if(e.target.className === 'selected' && myBooked.includes(e.target.innerText)){
       setmyBooked(myBooked.filter(item => item !== e.target.innerText))
@@ -26,7 +30,7 @@ const BookSeats = () => {
   return (
     <>
     <Grid item lg={6} ms={12}>
-      <BusDetails />
+      <BusDetails myBooked={myBooked} />
     </Grid>
     <Grid item lg={6} ms={12}> 
       <div className='showraper'>
@@ -40,10 +44,10 @@ const BookSeats = () => {
           </div>
           <div>
             <span className="available"></span>
-            <p>selected</p>
+            <p>Available</p>
           </div>
       </div>
-      <div className='seats' >
+      <div item className='seats' >
         <Seats seats={seats} preBoooked={preBoooked} addToBook={addToBook} booked={booked} />
       </div>
     </Grid>

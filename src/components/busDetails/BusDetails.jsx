@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Card,
-  Paper,
   Typography,
   Table,
   TableHead,
@@ -10,7 +9,7 @@ import {
   TableCell,
 } from "@material-ui/core";
 
-const BusDetails = () => {
+const BusDetails = ({ myBooked }) => {
   return (
     <>
       <Card>
@@ -23,21 +22,15 @@ const BusDetails = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow>
-              <TableCell>A1</TableCell>
-              <TableCell>80</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>A1</TableCell>
-              <TableCell>80</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>A1</TableCell>
-              <TableCell>80</TableCell>
-            </TableRow>
+            {myBooked.map((item) => (
+              <TableRow key={item}>
+                <TableCell>{item}</TableCell>
+                <TableCell>80</TableCell>
+              </TableRow>
+            ))}
             <TableRow>
               <TableCell>Total</TableCell>
-              <TableCell>800</TableCell>
+              <TableCell>{myBooked.length * 80}</TableCell>
             </TableRow>
           </TableBody>
         </Table>

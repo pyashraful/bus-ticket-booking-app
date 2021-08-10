@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-boxs;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .seats {
@@ -30,6 +31,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  font-size: 14px;
 }
 
 .showraper > div {
@@ -39,8 +41,8 @@
 }
 
 .showraper > div > span {
-  height: 25px;
-  width: 25px;
+  height: 15px;
+  width: 15px;
   display: block;
   margin-right: 10px;
   border-radius: 20%;
@@ -55,8 +57,10 @@
 
 .selected {
   background-color: #f8485e;
+  cursor: pointer;
 }
 
 .available {
   background-color: #97cacf;
+  cursor: pointer;
 }

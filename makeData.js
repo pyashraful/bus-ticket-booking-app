@@ -16,9 +16,12 @@
 // }
 
 // const arr = makeData()
-let arr = [1, 3, 4, 5]
-if(arr.includes(3)){
-  console.log('go')
-}
+// let arr = [1, 3, 4, 5]
+// if(arr.includes(3)){
+//   console.log('go')
+// }
 
-console.log(arr)
+// console.log(arr)
+
+const { a } = { a : 10}
+console.log(a)
