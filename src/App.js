@@ -10,8 +10,8 @@ const App = () => {
 
   return (
     <>
-      <Container height='100vh' className={classes.root}>
-        <Grid container alignItems='center'>
+      <Container className={classes.root}>
+        <Grid container alignItems='center'>  
           <BookSeats />
         </Grid>
       </Container>

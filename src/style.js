@@ -1,7 +1,10 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles"
 
 export default makeStyles({
   root:{
-    maxWidth:'650px'
+    display:'flex',
+    maxWidth:'650px',
+    height: '100vh',
+    alignItems:'center'
   }
 })

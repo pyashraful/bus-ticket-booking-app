@@ -7,8 +7,8 @@
   /* max-width: 250px; */
   /* height: 100vh; */
   display: grid;
-  grid-template-columns: repeat(4, 0.8fr);
-  grid-gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px 0;
   justify-items: end;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .seats div:nth-child(2n) {
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
 .bookedStyle {
