@@ -1,22 +1,15 @@
-import React from 'react';
-import BookSeats from './components/BookSeats';
-import { Container, Grid } from '@material-ui/core';
-import useStyles from './style';
-
+import React from "react";
+import BookSeats from "./components/BookSeats";
+import "./app.css";
 
 const App = () => {
-
-  const classes = useStyles()
-
   return (
-    <>
-      <Container className={classes.root}>
-        <Grid container alignItems='center'>  
-          <BookSeats />
-        </Grid>
-      </Container>
-    </>
-  )
-}
+    <div className="container">
+      <div className="bookSeatContainer">
+        <BookSeats />
+      </div>
+    </div>
+  );
+};
 
 export default App;

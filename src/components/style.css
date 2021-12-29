@@ -12,6 +12,10 @@
   justify-items: end;
 }
 
+.gstyle {
+  padding-right: 25px;
+}
+
 .seats > div {
   height: 30px;
   width: 30px;

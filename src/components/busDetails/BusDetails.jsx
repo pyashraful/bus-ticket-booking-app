@@ -12,7 +12,7 @@ import {
 const BusDetails = ({ myBooked }) => {
   return (
     <>
-      <Card>
+      <>
         <Typography variant="h5">SEAT INFORMATION</Typography>
         <Table>
           <TableHead>
@@ -34,7 +34,7 @@ const BusDetails = ({ myBooked }) => {
             </TableRow>
           </TableBody>
         </Table>
-      </Card>
+      </>
     </>
   );
 };
