@@ -4,8 +4,6 @@
 }
 
 .seats {
-  /* max-width: 250px; */
-  /* height: 100vh; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px 0;

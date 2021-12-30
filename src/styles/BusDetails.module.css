@@ -1,0 +1,15 @@
+.priceTable {
+  min-width: 100%;
+}
+
+.priceTable td,
+.priceTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.priceTable th {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: left;
+}

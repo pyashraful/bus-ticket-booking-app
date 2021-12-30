@@ -3,7 +3,7 @@ import BusDetails from "./busDetails/BusDetails";
 import busData from "../data";
 import { Grid, Card } from "@material-ui/core";
 import Seats from "./Seats";
-import "./style.css";
+import classes from "../styles/BookStyle.module.css";
 
 const BookSeats = () => {
   const [seats, setSeats] = useState(busData());
@@ -13,7 +13,7 @@ const BookSeats = () => {
 
   const addToBook = (e) => {
     if (
-      e.target.className === "available" &&
+      e.target.className === classes.available &&
       !myBooked.includes(e.target.innerText)
     ) {
       if (myBooked.length === 4) {
@@ -24,7 +24,7 @@ const BookSeats = () => {
       }
     }
     if (
-      e.target.className === "selected" &&
+      e.target.className === classes.selected &&
       myBooked.includes(e.target.innerText)
     ) {
       setmyBooked(myBooked.filter((item) => item !== e.target.innerText));
@@ -37,21 +37,21 @@ const BookSeats = () => {
         <BusDetails myBooked={myBooked} />
       </Grid>
       <Grid item lg={6} ms={12}>
-        <div className="showraper">
+        <div className={classes.showraper}>
           <div>
-            <span className="selected"></span>
+            <span className={classes.selected}></span>
             <p>selected</p>
           </div>
           <div>
-            <span className="booked"></span>
+            <span className={classes.booked}></span>
             <p>Booked</p>
           </div>
           <div>
-            <span className="available"></span>
+            <span className={classes.available}></span>
             <p>Available</p>
           </div>
         </div>
-        <div item className={`seats gstyle`}>
+        <div item className={`${classes.seats} ${classes.gstyle}`}>
           <Seats
             seats={seats}
             preBoooked={preBoooked}

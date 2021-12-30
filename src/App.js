@@ -1,11 +1,11 @@
 import React from "react";
 import BookSeats from "./components/BookSeats";
-import "./app.css";
+import classes from "./styles/App.module.css";
 
 const App = () => {
   return (
-    <div className="container">
-      <div className="bookSeatContainer">
+    <div className={classes.container}>
+      <div className={classes.bookSeatContainer}>
         <BookSeats />
       </div>
     </div>
