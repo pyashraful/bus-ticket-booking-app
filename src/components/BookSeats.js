@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import BusDetails from "./busDetails/BusDetails";
 import busData from "../data";
-import { Grid, Card } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Seats from "./Seats";
 import classes from "../styles/BookStyle.module.css";
 
 const BookSeats = () => {
-  const [seats, setSeats] = useState(busData());
+  const [seats, setSeats] = useState(() => busData());
   const [preBoooked, setPreBooked] = useState(["A1", "B2"]);
   const [booked, setbooked] = useState([]);
   const [myBooked, setmyBooked] = useState([]);
@@ -51,7 +51,7 @@ const BookSeats = () => {
             <p>Available</p>
           </div>
         </div>
-        <div item className={`${classes.seats} ${classes.gstyle}`}>
+        <div className={`${classes.seats} ${classes.gstyle}`}>
           <Seats
             seats={seats}
             preBoooked={preBoooked}

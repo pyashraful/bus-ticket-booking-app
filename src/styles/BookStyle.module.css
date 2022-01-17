@@ -6,12 +6,13 @@
 .seats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
   grid-gap: 20px 0;
-  justify-items: end;
+  justify-items: center;
 }
 
 .gstyle {
-  padding-right: 25px;
+  padding: 0 15px;
 }
 
 .seats > div {
