@@ -33,9 +33,7 @@ const BookSeats = () => {
   };
   return (
     <>
-      <Grid item lg={6} ms={12}>
-        <BusDetails myBooked={myBooked} />
-      </Grid>
+      <BusDetails myBooked={myBooked} />
       <Grid item lg={6} ms={12}>
         <div className={classes.showraper}>
           <div>
