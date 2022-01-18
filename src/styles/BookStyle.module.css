@@ -3,6 +3,14 @@
   font-family: "Roboto", sans-serif;
 }
 
+.seatsContainer {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  flex-basis: 48%;
+}
 .seats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -23,7 +31,7 @@
 }
 
 .seats div:nth-child(2n) {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .bookedStyle {
@@ -35,6 +43,7 @@
   justify-content: center;
   margin-bottom: 30px;
   font-size: 14px;
+  flex-basis: 100%;
 }
 
 .showraper > div {

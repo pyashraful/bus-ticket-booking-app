@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import BusDetails from "./busDetails/BusDetails";
 import busData from "../data";
-import { Grid } from "@material-ui/core";
 import Seats from "./Seats";
 import classes from "../styles/BookStyle.module.css";
 
@@ -34,7 +33,7 @@ const BookSeats = () => {
   return (
     <>
       <BusDetails myBooked={myBooked} />
-      <Grid item lg={6} ms={12}>
+      <div className={classes.seatsContainer}>
         <div className={classes.showraper}>
           <div>
             <span className={classes.selected}></span>
@@ -57,7 +56,7 @@ const BookSeats = () => {
             booked={booked}
           />
         </div>
-      </Grid>
+      </div>
     </>
   );
 };

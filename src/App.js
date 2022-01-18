@@ -4,7 +4,7 @@ import classes from "./styles/App.module.css";
 
 const App = () => {
   return (
-    <div className={classes.container}>
+    <div className={classes.appContainer}>
       <div className={classes.bookSeatContainer}>
         <BookSeats />
       </div>
