@@ -1,0 +1,47 @@
+.header {
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 600px;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  font-weight: 500;
+}
+
+nav li:first-child {
+  flex-basis: auto;
+  margin: 0 auto;
+  order: 2;
+}
+nav li:nth-child(2),
+nav li:nth-child(3) {
+  order: 1;
+}
+nav li:nth-child(4),
+nav li:nth-child(5) {
+  order: 3;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #f8485e;
+}
+
+.logo span {
+  color: #00c1d4;
+}
