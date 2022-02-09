@@ -1,0 +1,59 @@
+.contactForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.inputContainer {
+  border: 1px solid grey;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 5px;
+  overflow: hidden;
+  background: transparent;
+}
+.contactFormTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+label,
+input,
+textarea {
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 14px;
+  /* line-height: 1em; */
+  border: none;
+  font: inherit;
+}
+label {
+  display: inline-block;
+  font-size: 0.7em;
+  /* background: $grey; */
+  /* color: $opacBlack; */
+  color: black;
+  line-height: 1.75em;
+  border-right: 1px solid grey;
+
+  /*POSITION*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+textarea,
+input {
+  width: 100%;
+  max-width: 100%;
+}
+
+textarea {
+  margin-bottom: -5px;
+}
+
+input {
+  padding-left: 50px;
+}
