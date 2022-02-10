@@ -20,6 +20,11 @@ nav ul {
 
 nav ul li a {
   font-weight: 500;
+  cursor: pointer;
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 
 nav li:first-child {
@@ -36,9 +41,11 @@ nav li:nth-child(5) {
   order: 3;
 }
 
-.logo {
+.logo > a {
   font-size: 1.5em;
   font-weight: 800;
+}
+.logo > a {
   color: #f8485e;
 }
 

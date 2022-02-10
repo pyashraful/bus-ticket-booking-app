@@ -72,12 +72,14 @@ export default function Contact() {
               onChange={hendleChange}
             ></textarea>
           </div>
-          <input
+          <button
             id="submitBtn"
-            className="submitBtn"
+            className={classes.submitBtn}
             type="submit"
             value="Send"
-          ></input>
+          >
+            submit
+          </button>
         </form>
       </div>
     </div>

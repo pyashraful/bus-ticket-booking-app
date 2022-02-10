@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -24,17 +24,14 @@ textarea {
   box-sizing: border-box;
   padding: 10px;
   font-size: 14px;
-  /* line-height: 1em; */
   border: none;
   font: inherit;
 }
 label {
   display: inline-block;
-  font-size: 0.7em;
-  /* background: $grey; */
-  /* color: $opacBlack; */
+  font-size: 1.25em;
   color: black;
-  line-height: 1.75em;
+  line-height: 0.75em;
   border-right: 1px solid grey;
 
   /*POSITION*/
@@ -56,4 +53,18 @@ textarea {
 
 input {
   padding-left: 50px;
+}
+
+.submitBtn {
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.5s;
+  background: #00c1d4;
+}
+.submitBtn:hover {
 }

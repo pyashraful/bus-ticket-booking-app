@@ -23,7 +23,13 @@ export default function Navbar() {
               <a>Contact</a>
             </li>
             <li>
-              <a>Github</a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
             </li>
           </ul>
         </nav>
