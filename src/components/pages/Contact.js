@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import classes from "../../styles/Contact.module.css";
 
-export default function contact() {
+var initialState = {
+  userName: "",
+  email: "",
+  message: "",
+};
+
+function reducer(state, action) {
+  return {
+    ...state,
+    [action.name]: action.value,
+  };
+}
+
+export default function Contact() {
+  const [formData, setFormData] = useReducer(reducer, initialState);
+
+  function hendleSubmit(event) {
+    event.preventDefault();
+    console.log(formData);
+  }
+
+  function hendleChange(event) {
+    setFormData({
+      name: event.target.name,
+      value: event.target.value,
+    });
+  }
+
   return (
     <div className={classes.contactForm}>
       <div className={classes.contactFormTitle}>
@@ -11,18 +38,30 @@ export default function contact() {
       </div>
 
       <div className={classes.contactFormBody}>
-        <form>
+        <form onSubmit={hendleSubmit}>
           <div className={classes.inputContainer}>
             <label htmlFor="userName">
               <FaUser />
             </label>
-            <input type="text" id="userName" placeholder="User Name" />
+            <input
+              name="userName"
+              type="text"
+              id="userName"
+              placeholder="User Name"
+              onChange={hendleChange}
+            />
           </div>
           <div className={classes.inputContainer}>
             <label htmlFor="email">
               <FaEnvelope />
             </label>
-            <input type="email" id="email" placeholder="Email" />
+            <input
+              onChange={hendleChange}
+              name="email"
+              type="email"
+              id="email"
+              placeholder="Email"
+            />
           </div>
           <div className={classes.inputContainer}>
             <textarea
@@ -30,11 +69,12 @@ export default function contact() {
               id="message"
               rows="10"
               placeholder="Message"
+              onChange={hendleChange}
             ></textarea>
           </div>
           <input
             id="submitBtn"
-            class="submitBtn"
+            className="submitBtn"
             type="submit"
             value="Send"
           ></input>
