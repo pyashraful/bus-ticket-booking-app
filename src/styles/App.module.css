@@ -28,3 +28,8 @@
   display: flex;
   flex-flow: column;
 }
+@media only screen and (max-width: 600px) {
+  .appContainer {
+    height: auto;
+  }
+}

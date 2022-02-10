@@ -9,10 +9,10 @@ const App = () => {
     <div className={classes.appContainer}>
       <div className={classes.bodyContainer}>
         <NavBar />
-        {/* <div className={classes.bookSeatContainer}>
+        <div className={classes.bookSeatContainer}>
           <BookSeats />
-        </div> */}
-        <Contact />
+        </div>
+        {/* <Contact /> */}
       </div>
     </div>
   );
