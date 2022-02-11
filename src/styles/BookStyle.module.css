@@ -3,6 +3,21 @@
   font-family: "Roboto", sans-serif;
 }
 
+.busSeatContainer {
+  padding: 1.5rem;
+  max-width: 600px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  gap: 4%;
+}
+
+.busSeatContainer {
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .seatsContainer {
   padding: 10px;
   margin: 0;

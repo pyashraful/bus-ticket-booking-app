@@ -31,7 +31,7 @@ const BookSeats = () => {
     }
   };
   return (
-    <>
+    <div className={classes.busSeatContainer}>
       <BusDetails myBooked={myBooked} />
       <div className={classes.seatsContainer}>
         <div className={classes.showraper}>
@@ -57,7 +57,7 @@ const BookSeats = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
