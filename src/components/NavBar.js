@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "../styles/NavBar.module.css";
 
 export default function Navbar() {
@@ -9,18 +10,18 @@ export default function Navbar() {
         <nav>
           <ul>
             <li className={classes.logo}>
-              <a>
+              <Link to="/">
                 <span>BOOK</span>ME
-              </a>
+              </Link>
             </li>
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a>Mail</a>
+              <a>Resume</a>
             </li>
             <li>
-              <a>Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
               <a
