@@ -25,7 +25,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="https://github.com"
+                href=" https://github.com/pyashraful"
                 target="_blank"
                 rel="noopener noreferrer"
               >

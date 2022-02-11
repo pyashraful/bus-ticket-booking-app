@@ -1,9 +1,8 @@
 import React from "react";
-import BookSeats from "./components/BookSeats";
-import NavBar from "./components/NavBar";
+import Home from "./components/pages/Home";
 import Layout from "./components/Layout";
-import classes from "./styles/App.module.css";
 import Contact from "./components/pages/Contact";
+import classes from "./styles/App.module.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -12,7 +11,7 @@ const App = () => {
       <div className={classes.appContainer}>
         <Layout>
           <Routes>
-            <Route path="/" element={<BookSeats />} />
+            <Route path="/" element={<Home />} />
             <Route path="contact" element={<Contact />} />
           </Routes>
         </Layout>
