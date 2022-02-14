@@ -6,6 +6,9 @@
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.header {
+  width: 600px;
+}
 
 nav ul {
   list-style: none;
@@ -51,4 +54,10 @@ nav li:nth-child(5) {
 
 .logo span {
   color: #00c1d4;
+}
+
+@media (max-width: 600px) {
+  .header {
+    width: 100%;
+  }
 }
