@@ -3,12 +3,14 @@ import BusDetails from "./busDetails/BusDetails";
 import busData from "../data";
 import Seats from "./Seats";
 import classes from "../styles/BookStyle.module.css";
+import Modal from "./Modal";
 
 const BookSeats = () => {
   const [seats, setSeats] = useState(() => busData());
   const [preBoooked, setPreBooked] = useState(["A1", "B2"]);
   const [booked, setbooked] = useState([]);
   const [myBooked, setmyBooked] = useState([]);
+  const [open, setOpen] = React.useState(false);
 
   const addToBook = (e) => {
     if (
@@ -16,7 +18,8 @@ const BookSeats = () => {
       !myBooked.includes(e.target.innerText)
     ) {
       if (myBooked.length === 4) {
-        alert("you cannot select more than 4");
+        // alert("you cannot select more than 4");
+        setOpen(true);
       } else {
         setbooked([...booked, e.target.innerText]);
         setmyBooked([...myBooked, e.target.innerText]);
@@ -57,6 +60,7 @@ const BookSeats = () => {
           />
         </div>
       </div>
+      <Modal open={open} />
     </div>
   );
 };

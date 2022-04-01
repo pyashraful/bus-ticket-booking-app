@@ -1,12 +1,14 @@
 import React from "react";
 import classes from "../../styles/BusDetails.module.css";
 import { Link } from "react-router-dom";
+// import Select from "../Select";
 
 const BusDetails = ({ myBooked }) => {
   console.log(myBooked);
 
   return (
     <div className={classes.seatinfo}>
+      {/* <Select /> */}
       <h2>SEAT INFORMATION</h2>
       <table className={classes.priceTable}>
         <thead>
