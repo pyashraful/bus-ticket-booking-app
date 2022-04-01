@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./components/pages/Home";
 import Layout from "./components/Layout";
 import Contact from "./components/pages/Contact";
+import Confirm from "./components/pages/Confirm";
 import classes from "./styles/App.module.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,6 +14,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="confirm" element={<Confirm />} />
           </Routes>
         </Layout>
       </div>

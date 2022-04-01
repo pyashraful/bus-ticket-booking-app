@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "../../styles/BusDetails.module.css";
+import { Link } from "react-router-dom";
 
 const BusDetails = ({ myBooked }) => {
   console.log(myBooked);
@@ -31,7 +32,9 @@ const BusDetails = ({ myBooked }) => {
         </tfoot>
       </table>
 
-      <button className={classes.btn}>confirm</button>
+      <Link to="/confirm">
+        <button className={classes.btn}>confirm</button>
+      </Link>
     </div>
   );
 };
