@@ -1,12 +1,25 @@
 import { Modal } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Fade from "@material-ui/core/Fade";
+import Zoom from "@material-ui/core/Zoom";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    borderRadius: 4,
+
+    // outline: "none",
+    // // "&:focus": {
+    // //   outline: "none",
+    // // },
+
+    // "&:active": {
+    //   outline: "none",
+    // },
+    // "&:focus": {
+    //   outline: "none",
+    // },
   },
   paper: {
     position: "absolute",
@@ -15,20 +28,32 @@ const useStyles = makeStyles((theme) => ({
     // transform: "translate(-50%, -50%)",
     width: 400,
     backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
+    // boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+  },
+  text: {
+    textAlign: "center",
   },
 }));
 
-export default function ModalComponent({ open }) {
+export default function ModalComponent({ open, setOpen }) {
+  function handleClose() {
+    setOpen(false);
+  }
+
   const classes = useStyles();
   return (
-    <Modal open={open} className={classes.modal}>
-      <Fade in={open}>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      // disableAutoFocus={true}
+      className={classes.modal}
+    >
+      <Zoom in={open}>
         <div className={classes.paper}>
-          <h2>h1</h2>
+          <p className={classes.text}>You cannot select more than 4 seats</p>
         </div>
-      </Fade>
+      </Zoom>
     </Modal>
   );
 }

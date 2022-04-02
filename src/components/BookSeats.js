@@ -60,7 +60,7 @@ const BookSeats = () => {
           />
         </div>
       </div>
-      <Modal open={open} />
+      <Modal open={open} setOpen={setOpen} />
     </div>
   );
 };
