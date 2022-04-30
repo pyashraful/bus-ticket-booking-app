@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 4,
 
     // outline: "none",
     // // "&:focus": {
@@ -26,10 +25,12 @@ const useStyles = makeStyles((theme) => ({
     // top: "50%",
     // left: "50%",
     // transform: "translate(-50%, -50%)",
-    width: 400,
+    // width: 400,
     backgroundColor: theme.palette.background.paper,
     // boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+    borderRadius: 4,
+    maxWidth: 400,
   },
   text: {
     textAlign: "center",
