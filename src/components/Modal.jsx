@@ -7,27 +7,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-
-    // outline: "none",
-    // // "&:focus": {
-    // //   outline: "none",
-    // // },
-
-    // "&:active": {
-    //   outline: "none",
-    // },
-    // "&:focus": {
-    //   outline: "none",
-    // },
   },
   paper: {
     position: "absolute",
-    // top: "50%",
-    // left: "50%",
-    // transform: "translate(-50%, -50%)",
-    // width: 400,
     backgroundColor: theme.palette.background.paper,
-    // boxShadow: theme.shadows[5],
     padding: theme.spacing(3, 4, 3),
     borderRadius: 4,
     maxWidth: 400,
@@ -44,12 +27,7 @@ export default function ModalComponent({ open, setOpen }) {
 
   const classes = useStyles();
   return (
-    <Modal
-      open={open}
-      onClose={handleClose}
-      // disableAutoFocus={true}
-      className={classes.modal}
-    >
+    <Modal open={open} onClose={handleClose} className={classes.modal}>
       <Zoom in={open}>
         <div className={classes.paper}>
           <p className={classes.text}>You cannot select more than 4 seats</p>
