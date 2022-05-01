@@ -41,3 +41,9 @@
 .btn:hover {
   background: #f8485e;
 }
+
+@media (max-width: 600px) {
+  .seatinfo {
+    order: 2;
+  }
+}

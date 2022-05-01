@@ -92,3 +92,9 @@
   background-color: #97cacf;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .seatsContainer {
+    order: 1;
+  }
+}
